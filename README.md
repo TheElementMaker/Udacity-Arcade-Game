@@ -4,7 +4,7 @@ Purpose of the game is to make it to the other side without getting hit by bugs.
 
 # Live Link
 
-https://
+https://theelementmaker.github.io/Udacity-Arcade-Game/
 
 ## Languages
 * HTML & CSS
