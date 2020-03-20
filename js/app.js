@@ -36,6 +36,7 @@ class Player {
 		this.sprite = 'images/char-boy.png';
 	}
 	handleInput(keyCode) {
+		//Move player on canvas
 		switch (keyCode) {
 			case 'left':
 				this.x -= this.movement + 50;
@@ -67,22 +68,25 @@ class Player {
 			this.x = 0;
 		}
 		if (this.y < 0){
-			numWins++;
+			//Player made it to the water
 			this.y = 380;
+			numWins++;
+			allEnemies.forEach(function(item){
+				item.movement = 100 + Math.floor(Math.random() * 500);
+			})
 		}
 	}
 }
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-let allEnemies = [];
+var allEnemies = [];
 let player = new Player(200, 400, 50);
 let enemyPosition = [60, 140, 220];
 
-enemyPosition.forEach((enemyPositionCoordinate) => {
-	let enemy = new Enemy(0, enemyPositionCoordinate, 100 + Math.floor(Math.random() * 500));
+enemyPosition.forEach((y) => {
+	let enemy = new Enemy(0, y, 100 + Math.floor(Math.random() * 500));
 	allEnemies.push(enemy);
-	// console.log(allEnemies);
 });
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
