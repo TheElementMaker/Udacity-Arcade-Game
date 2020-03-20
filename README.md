@@ -7,6 +7,6 @@ Purpose of the game is to make it to the other side without getting hit by bugs.
 https://
 
 ## Languages
-	*HTML & CSS
-	*HTML5 Canvas
-	*Javascript
+* HTML & CSS
+* HTML5 Canvas
+* Javascript
